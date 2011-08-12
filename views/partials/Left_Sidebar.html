@@ -1,0 +1,21 @@
+<div id="sidebar" class="left">
+
+  	<div id="navigation">
+		    <?php 
+                if($this->uri->segment(1)){
+                      $segment = $this->uri->segment(1);
+                } else {
+                    $segment = 'home';
+                }
+          ?>
+
+     <ul>
+    {pyro:navigation:links group="<?=$segment?>" indent="tab"}
+     </ul>
+    
+   </div>
+
+	{pyro:widgets:area slug="sidebar"}
+	
+
+</div>
